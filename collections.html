@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliyotèk Lakay</title>
+  <style> 
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: white; color: #3333335f; }
+
+    /* Header */
+    header { color: white; }
+    header .logo { color: white; }
+    nav a { color: white; }
+    header {
+      background: #2c3e50; color: white;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; flex-wrap: wrap;
+    }
+    
+
+    .navbar { 
+        background: #2c3e50; color: white;
+        padding: 1rem 2rem; flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+
+     }
+     .menu { 
+        display: flex; gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        
+      }
+      .menu a { 
+
+        color: #333; text-decoration: none; font-weight: bold;
+       color: #333; text-decoration: none; font-weight: bold;
+       justify-content: space-between;
+       align-items: center;
+       justify-content: space-between;
+       align-items: center;
+        
+       }
+    
+    
+    header .logo { font-weight: bold; font-size: 1.3rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Seksyon */
+    section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
+    section h2 { text-align: center; margin-bottom: 1.5rem; }
+
+    /* Hero */
+    .hero {
+      background: url('library.jpg') no-repeat center center/cover;
+      color: black; text-align: center; padding: 5rem 2rem;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero .btn {
+      display: inline-block; margin-top: 1rem;
+      padding: 0.7rem 1.2rem; background: #e67e22;
+      color: white; border-radius: 5px; text-decoration: none;
+    }
+    .hero .btn:hover { background: #d35400; }
+
+    /* Koleksyon */
+    
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    }
+    
+    .card {
+      background: white; padding: 3rem;
+      border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .ouvrages {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    } 
+
+
+    /* Liv */
+    .liv {
+      background: white; padding: 2rem; border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Fòm */
+    form {
+      display: grid; gap: 1rem; max-width: 400px; margin: auto;
+    }
+    input, button {
+      padding: 0.7rem; border: 1px solid #ccc; border-radius: 5px;
+    }
+    button { background: #2c3e50; color: white; border: none; cursor: pointer; }
+    button:hover { background: #1a252f; }
+
+    /* Kontak */
+    .kontak { text-align: center; }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Footer */
+    footer {
+      background: #2c3e50; color: white;
+      padding: 40px 0 20px; margin-top: 40px;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .footer-column h3 {
+      margin-bottom: 15px;
+      color: #ecf0f1;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 0.5rem;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+    .footer-column a {
+      color: #bdc3c7;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-column a:hover {
+      color: #e67e22;
+    }
+    .footer-column p {
+      line-height: 1.6;
+      color: #bdc3c7;
+      margin-bottom: 8px;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #34495e;
+    }
+    .footer-bottom p {
+      color: #95a5a6;
+      margin: 0;
+    }
+
+    /* Responsivite */
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav ul { flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+  
+   <header>
+    <div class="logo"> 
+<img src="logo_haitiprojects.jpeg" alt="logo>" width="50" height="50">Haiti Projects 
+
+    </div>
+     <nav class="menu">
+<ul>
+     <li><a href="index.html">Akèy</a></li>
+  <li><a href="Membres.html">Vin Manm</a></li>
+      <li><a href="collections.html">Koleksyon</a></li>
+      <li><a href="contacts.html">Kontak</a></li>
+      <li><a href="Details.html">Detay</a></li>
+</ul>
+   </nav>
+  </header>
+</head>
+<body>
+
+  >
+  <!-- Hero -->
+  <section id="akèy" class="hero">
+    <h1>Byenvini nan Bibliyotèk Lakay</h1>
+    <p>Chèche, li, epi dekouvri — resous pou tout laj.</p>
+    <a href="#koleksyon" class="btn">Dekouvri Koleksyon an</a>
+  </section>
+
+  <!-- Koleksyon -->
+  <section id="koleksyon">
+    <h2>Collection des ouvrages</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="contes.jpeg" alt="Contes pour enfants" width="100%" height="auto">
+        <p>Contes pour les enfant</p>
+      </div>
+      <div class="card">
+        <img src="litterature.jpeg" alt="Littérature moderne" width="100%" height="auto">
+        <p>litterature</p>
+      </div>
+      <div class="card">
+        <img src="societe.jpeg" alt="societe" width="100%" height="auto">
+        <p>societe</p>
+      </div>
+      <div class="card">
+        <img src="lanques.jpeg" alt="Langues" width="100%" height="auto">
+        <p>Langues</p>
+      </div>
+      <div class="card">
+        <img src="livre ecole.jpeg" alt="Enprunt des livres" width="100%" height="auto">
+        <p>Emprunt des livres</p>
+      </div>
+     
+      <div class="card">
+        <img src="education.jpeg" alt="Education" width="100%" height="auto">
+        <p>Contes pour les enfants</p>
+      </div>
+    </div>
+    
+    </div>
+
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>📚 Haiti Projects</h3>
+        <p>Ressources pour tous les âges — Recherchez, lisez et découvrez.</p>
+        <p>📧 Email: bibliyotek@lakay.ht</p>
+        <p>📱 Telefòn: +509 1234-5678</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>🔗 Lyen Rapid</h3>
+       <ul>
+          <li><a href="index.html">🏠 Acceuil</a></li>
+          <li><a href="collection.html">📚collection</a></li>
+          <li><a href="#liv">📖 Livres</a></li>
+          <li><a href="membre.html">👥 Devenir Membre</a></li>
+          <li><a href="contact.html">📞 Contact</a></li>
+        </ul>
+      
+      <div class="footer-column">
+        <h3>⏰ Horaire d'Ouverture</h3>
+        <ul>
+          <li>Lendi - Vandredi: 8h - 18h</li>
+          <li>Samdi: 9h - 15h</li>
+          <li>Dimanch: Fèmen</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <p>📍 Adrès:</p>
+          <p>Port-au-Prince, Ayiti</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Bibliyotèk Lakay — Tout dwa rezève</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+

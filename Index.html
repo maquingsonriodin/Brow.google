@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliyotèk Lakay</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background:white color: #333; }
+
+    /* Header */
+    header {
+      background: #2c3e50; color: white;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; flex-wrap: wrap;
+    }
+    header .logo { font-weight: bold; font-size: 1.3rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Seksyon */
+    section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
+    section h2 { text-align: center; margin-bottom: 1.5rem; }
+
+    /* Hero */
+    .hero {
+      background: url('library.jpg') no-repeat center center/cover;
+      color: black; text-align: center; padding: 5rem 2rem;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero .btn {
+      display: inline-block; margin-top: 1rem;
+      padding: 0.7rem 1.2rem; background: #e67e22;
+      color: white; border-radius: 5px; text-decoration: none;
+    }
+    .hero .btn:hover { background: #d35400; }
+
+    /* Koleksyon */
+    
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    }
+    
+    .card {
+      background: white; padding: 3rem;
+      border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .ouvrages {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    } 
+
+
+    /* Liv */
+    .liv {
+      background: white; padding: 2rem; border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Fòm */
+    form {
+      display: grid; gap: 1rem; max-width: 400px; margin: auto;
+    }
+    input, button {
+      padding: 0.7rem; border: 1px solid #ccc; border-radius: 5px;
+    }
+    button { background: #2c3e50; color: white; border: none; cursor: pointer; }
+    button:hover { background: #1a252f; }
+
+    /* Kontak */
+    .kontak { text-align: center; }
+
+    /* Footer */
+    footer {
+      background: #2c3e50; color: white;
+      padding: 40px 0 20px; margin-top: 40px;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .footer-column h3 {
+      margin-bottom: 15px;
+      color: #ecf0f1;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 0.5rem;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+    .footer-column a {
+      color: #bdc3c7;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-column a:hover {
+      color: #e67e22;
+    }
+    .footer-column p {
+      line-height: 1.6;
+      color: #bdc3c7;
+      margin-bottom: 8px;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #34495e;
+    }
+    .footer-bottom p {
+      color: #95a5a6;
+      margin: 0;
+    }
+
+    /* Responsivite */
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav ul { flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+  
+   <header>
+    <div class="logo"> 
+<img src="logo_haitiprojects.jpeg" alt="logo>" width="50" height="50">Haiti Projects 
+
+    </div>
+     <nav class="menu">
+<ul>
+  <li><a href="index.html">Akèy</a></li>
+  <li><a href="Membres.html">Vin Manm</a></li>
+      <li><a href="collections.html">Koleksyon</a></li>
+      <li><a href="contacts.html">Kontak</a></li>
+       <li><a href="Details.html">Detay</a></li>
+</ul>
+   </nav>
+  </header>
+</head>
+<body>
+
+  >
+  <!-- Hero -->
+  <section id="akèy" class="hero">
+    <h1>Byenvini nan Bibliyotèk Lakay</h1>
+    <p>Chèche, li, epi dekouvri — resous pou tout laj.</p>
+    <a href="#koleksyon" class="btn">Dekouvri Koleksyon an</a>
+  </section>
+
+  <!-- Koleksyon -->
+  <section id="koleksyon">
+    <h2>Collection des ouvrages</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="contes.jpeg" alt="Contes pour enfants" width="100%" height="auto">
+        <p>Contes pour les enfant</p>
+      </div>
+      <div class="card">
+        <img src="litterature.jpeg" alt="Littérature moderne" width="100%" height="auto">
+        <p>litterature</p>
+      </div>
+      <div class="card">
+        <img src="societe.jpeg" alt="societe" width="100%" height="auto">
+        <p>societe</p>
+      </div>
+      <div class="card">
+        <img src="lanques.jpeg" alt="Langues" width="100%" height="auto">
+        <p>Langues</p>
+      </div>
+      <div class="card">
+        <img src="livre ecole.jpeg" alt="Enprunt des livres" width="100%" height="auto">
+        <p>Emprunt des livres</p>
+      </div>
+     
+      <div class="card">
+        <img src="education.jpeg" alt="Education" width="100%" height="auto">
+        <p>Contes pour les enfants</p>
+      </div>
+    </div>
+    
+    </div>
+
+  </section>
+  
+  <section id="Section des ouvrages">
+    <h2>plus recent</h2>
+
+    <div class="ouvrages">
+      <div class="card">
+        <img src="34596-jean-baptiste-coloriage_800.jpg" alt="Livre récent 1" width="100%" height="auto">
+        <h3>📘 Nouveau Roman 1</h3>
+        <p>Auteur: Jean Baptiste</p>
+      </div>
+      <div class="card">
+        <img src="marie-claude.webp" alt="Livre récent 2" width="100%" height="auto">
+        <h3>📗 Histoire d'Haïti</h3>
+        <p>Auteur: Marie Claude</p>
+      </div>
+      <div class="card">
+        <img src="sciences-moderne.jpg" alt="Livre récent 3" width="100%" height="auto">
+        <h3>📙 Sciences Modernes</h3>
+        <p>Auteur: Pierre Lafontaine</p>
+      </div>
+      <div class="card">
+        <img src="POESIS.jpg" alt="Livre récent 4" width="100%" height="auto">
+        <h3>📕 Poésie Créole</h3>
+        <p>Auteur: Nadège Joseph</p>
+      </div>
+      <div class="card">
+        <img src="maths.webp" alt="Livre récent 5" width="100%" height="auto">
+        <h3>📘 Mathématiques Avancées</h3>
+        <p>Auteur: Jacques Beauvoir</p>
+      </div>
+      <div class="card">
+        <img src="culture.jpg" alt="Livre récent 6" width="100%" height="auto">
+        <h3>📗 Culture Haïtienne</h3>
+        <p>Auteur: Lydia Saint-Louis</p>
+      </div>
+      <div class="card">
+        <img src="Maitrise-de-l-innovation-technologique.jpg" alt="Livre récent 7" width="100%" height="auto">
+        <h3>📙 Technologie et Innovation</h3>
+        <p>Auteur: Marc Antoine</p>
+      </div>
+      <div class="card">
+        <img src="classite.jpg" alt="Livre récent 8" width="100%" height="auto">
+        <h3>📕 Littérature Classique</h3>
+        <p>Auteur: Francine Dupont</p>
+      </div>
+      <div class="card">
+        <img src="guide.jpg" alt="Livre récent 9" width="100%" height="auto">
+        <h3>📘 Guide Pratique</h3>
+        <p>Auteur: Robert Michel</p>
+      </div>
+    </div>
+     
+     <section id="liv">
+      <h2>Liv disponib</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="liv roman.avif" alt="Livre disponible 1" width="100%" height="auto">
+          <a href="https://www.bing.com/search?q=Livres+Roman+Reader+Digest&FORM=HDRSC1">telecharger</a>
+          
+        </div>
+      </div>
+      <div class="card">
+        <img src="liv lang.webp" alt="Livre disponible 2" width="100%" height="auto">
+        <a href="https://www.bing.com/search?q=Livres+Langues+Reader+Digest&FORM=HDRSC1">telecharger</a>
+        
+      </div>
+      <div class="card">
+        <img src="liv istwa.webp" alt="Livre disponible 3" width="100%" height="auto">
+        <a href="https://www.bing.com/search?q=Livres+ISTWA+Reader+Digest&FORM=HDRSC1">telecharger</a>
+        
+      </div>
+      
+        <div class="card">
+          <img src="realistic-colorful-dictionary-isolated-on-260nw-1247703274.webp" alt="Livre disponible 5" width="100%" height="auto">
+          <a href="https://www.bing.com/search?q=Dictionnaire+ColoriÃ©+Réaliste+Reader+Digest&FORM=HDRSC1">telecharger</a>
+        </div>
+        <div class="card">
+          <img src="liv sante.jpg" alt="Livre disponible 6" width="100%" height="auto">
+          <a href="https://www.bing.com/search?q=Livres+de+Sant%C3%A9+Reader+Digest&FORM=HDRSC1">telecharger</a>
+        
+        </div>
+      </div>
+     </section>
+
+    <div style="text-align: center; margin-top: 1rem;">
+      <a href="#koleksyon" class="btn">Voir plus d'ouvrages</a>
+
+      
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>📚 Bibliyotèk Lakay</h3>
+        <p>Resous pou tout laj — Chèche, li, epi dekouvri.</p>
+        <p>📧 Email: bibliyotek@lakay.ht</p>
+        <p>📱 Telefòn: +509 1234-5678</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>🔗 Lyen Rapid</h3>
+        <ul>
+          <li><a href="#akèy">🏠 Akèy</a></li>
+          <li><a href="#koleksyon">📚 Koleksyon</a></li>
+          <li><a href="#liv">📖 Liv</a></li>
+          <li><a href="#manm">👥 Vin Manm</a></li>
+          <li><a href="#kontak">📞 Kontak</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>⏰ Orè Louvèti</h3>
+        <ul>
+          <li>Lendi - Vandredi: 8h - 18h</li>
+          <li>Samdi: 9h - 15h</li>
+          <li>Dimanch: Fèmen</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <p>📍 Adrès:</p>
+          <p>Port-au-Prince, Ayiti</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Bibliyotèk Lakay — Tout dwa rezève</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+

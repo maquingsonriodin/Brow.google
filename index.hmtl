@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliyotèk Lakay</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background:white; color: #333; }
+
+    /* Header */
+    header {
+      background: #2c3e50; color: white;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; flex-wrap: wrap;
+    }
+    header .logo { font-weight: bold; font-size: 1.3rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Seksyon */
+    section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
+    section h2 { text-align: center; margin-bottom: 1.5rem; }
+
+    /* Hero */
+    .hero {
+      background: url('library.jpg') no-repeat center center/cover;
+      color: black; text-align: center; padding: 5rem 2rem;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero .btn {
+      display: inline-block; margin-top: 1rem;
+      padding: 0.7rem 1.2rem; background: #e67e22;
+      color: white; border-radius: 5px; text-decoration: none;
+    }
+    .hero .btn:hover { background: #d35400; }
+
+    /* Koleksyon */
+    
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    }
+    
+    .card {
+      background: white; padding: 3rem;
+      border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .ouvrages {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    } 
+
+
+    /* Liv */
+    .liv {
+      background: white; padding: 2rem; border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Fòm */
+    form {
+      display: grid; gap: 1rem; max-width: 400px; margin: auto;
+    }
+    input, button {
+      padding: 0.7rem; border: 1px solid #ccc; border-radius: 5px;
+    }
+    button { background: #2c3e50; color: white; border: none; cursor: pointer; }
+    button:hover { background: #1a252f; }
+
+    /* Kontak */
+    .kontak { text-align: center; }
+
+    /* Footer */
+    footer {
+      background: #2c3e50; color: white;
+      padding: 40px 0 20px; margin-top: 40px;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .footer-column h3 {
+      margin-bottom: 15px;
+      color: #ecf0f1;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 0.5rem;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+    .footer-column a {
+      color: #bdc3c7;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-column a:hover {
+      color: #e67e22;
+    }
+    .footer-column p {
+      line-height: 1.6;
+      color: #bdc3c7;
+      margin-bottom: 8px;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #34495e;
+    }
+    .footer-bottom p {
+      color: #95a5a6;
+      margin: 0;
+    } 
+    .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color:greenyellow;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .checkbox-group {
+            margin-top: 20px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #66ea90 0%, #9fa24b 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 25px;
+            }
+           
+
+    /* Responsivite */
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav ul { flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+   <header>
+    <div class="logo"> 
+<img src="logo_haitiprojects.jpeg" alt="logo>" width="50" height="50">Haiti Projects 
+
+    </div>
+        <nav class="menu">
+<ul>
+  <li><a href="index.html">Akèy</a></li>
+      <li><a href="collection.html">Koleksyon</a></li>
+      <li><a href="Membres.html">Vin Manm</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+      <li><a href="Details.html">Kontak</a></li>
+</ul>
+   </nav>
+    </nav>
+  </header>
+</head>
+<body> 
+<div class="container">
+        <h1>📚 Inscription Bibliothèque</h1>
+        <p class="subtitle">Rejoignez notre communauté de lecteurs</p>
+        
+        <form id="inscriptionForm" action="#" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nom">Nom <span class="required">*</span></label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="prenom">Prénom <span class="required">*</span></label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="telephone">Téléphone <span class="required">*</span></label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dateNaissance">Date de naissance <span class="required">*</span></label>
+                    <input type="date" id="dateNaissance" name="dateNaissance" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="adresse">Adresse complète <span class="required">*</span></label>
+                <textarea id="adresse" name="adresse" required></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="ville">Ville <span class="required">*</span></label>
+                    <input type="text" id="ville" name="ville" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="codePostal">Code postal <span class="required">*</span></label>
+                    <input type="text" id="codePostal" name="codePostal" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="typeMembre">Type de membre <span class="required">*</span></label>
+                <select id="typeMembre" name="typeMembre" required>
+                    <option value="">Sélectionnez...</option>
+                    <option value="etudiant">Étudiant</option>
+                    <option value="adulte">Adulte</option>
+                    <option value="senior">Senior (+ de 65 ans)</option>
+                    <option value="famille">Famille</option>
+                </select>
+            </div>
+            
+            <div class="checkbox-group">
+                <label>Centres d'intérêt :</label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="interets[]" value="fiction">
+                    Fiction et Romans
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="interets[]" value="sciences">
+                    Sciences et Technologies
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="interets[]" value="histoire">
+                    Histoire et Biographies
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="interets[]" value="jeunesse">
+                    Littérature Jeunesse
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="interets[]" value="bd">
+                    Bandes Dessinées
+                </label>
+            </div>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="newsletter" value="oui">
+                    Je souhaite recevoir la newsletter de la bibliothèque
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="conditions" required>
+                    J'accepte les conditions d'utilisation <span class="required">*</span>
+                </label>
+            </div>
+            
+            <button type="submit" class="submit-btn">S'inscrire maintenant</button>
+        </form>
+      
+    </div>
+
+
+
+
+
+  </body>
+
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>📚 Bibliyotèk Lakay</h3>
+        <p>Resous pou tout laj — Chèche, li, epi dekouvri.</p>
+        <p>📧 Email: bibliyotek@lakay.ht</p>
+        <p>📱 Telefòn: +509 1234-5678</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>🔗 Lyen Rapid</h3>
+        <ul>
+          <li><a href="#akèy">🏠 Akèy</a></li>
+          <li><a href="#koleksyon">📚 Koleksyon</a></li>
+          <li><a href="#liv">📖 Liv</a></li>
+          <li><a href="#manm">👥 Vin Manm</a></li>
+          <li><a href="#kontak">📞 Kontak</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>⏰ Orè Louvèti</h3>
+        <ul>
+          <li>Lendi - Vandredi: 8h - 18h</li>
+          <li>Samdi: 9h - 15h</li>
+          <li>Dimanch: Fèmen</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <p>📍 Adrès:</p>
+          <p>Port-au-Prince, Ayiti</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Bibliyotèk Lakay — Tout dwa rezève</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliothèque à Domicile</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: white; color: #3333335f; }
+    /* Header */
+    header {
+      background: #2c3e50; color: white;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; flex-wrap: wrap;
+    }
+    header .logo { font-weight: bold; font-size: 1.3rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+     }
+     .menu { 
+        display: flex; gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        
+        
+      }
+      .menu a { 
+
+        color: #333; text-decoration: none; font-weight: bold;
+       justify-content: space-between;
+       align-items: center;
+       
+        
+       }
+
+    /* Seksyon */
+    section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
+    section h2 { text-align: center; margin-bottom: 1.5rem; }
+
+    /* Hero */
+    .hero {
+      background: url('library.jpg') no-repeat center center/cover;
+      color: black; text-align: center; padding: 5rem 2rem;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero .btn {
+      display: inline-block; margin-top: 1rem;
+      padding: 0.7rem 1.2rem; background: #e67e22;
+      color: white; border-radius: 5px; text-decoration: none;
+    }
+    .hero .btn:hover { background: #d35400; }
+
+    /* Koleksyon */
+    
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    }
+    
+    .card {
+      background: white; padding: 3rem;
+      border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .ouvrages {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    } 
+
+
+    /* Liv */
+    .liv {
+      background: white; padding: 2rem; border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Fòm */
+    form {
+      display: grid; gap: 1rem; max-width: 400px; margin: auto;
+    }
+    input, button {
+      padding: 0.7rem; border: 1px solid #ccc; border-radius: 5px;
+    }
+    button { background: #2c3e50; color: white; border: none; cursor: pointer; }
+    button:hover { background: #1a252f; }
+
+    /* Kontak */
+    .kontak { text-align: center; }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Footer */
+    footer {
+      background: #2c3e50; color: white;
+      padding: 40px 0 20px; margin-top: 40px;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .footer-column h3 {
+      margin-bottom: 15px;
+      color: #ecf0f1;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 0.5rem;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+    .footer-column a {
+      color: #bdc3c7;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-column a:hover {
+      color: #e67e22;
+    }
+    .footer-column p {
+      line-height: 1.6;
+      color: #bdc3c7;
+      margin-bottom: 8px;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #34495e;
+    }
+    .footer-bottom p {
+      color: #95a5a6;
+      margin: 0;
+    }
+
+  </style>
+  
+   <header>
+    <div class="logo"> 
+<img src="logo_haitiprojects.jpeg" alt="logo>" width="50" height="50">Haiti Projects 
+
+    </div>
+     <nav class="menu">
+<ul>
+  <li><a href="index.html">Akèy</a></li>
+  <li><a href="Membres.html">Vin Manm</a></li>
+      <li><a href="collections.html">Koleksyon</a></li>
+      <li><a href="contacts.html">Kontak</a></li>
+      <li><a href="Details.html">Detay</a></li>
+</ul>
+   </nav>
+  </header>
+</head>
+<body>
+ <!-- Liv pa Kategori -->
+  <section id="liv">
+    <h2>📖 Livres par Catégorie</h2>
+  </section>
+    <!-- Kategori: Literati -->
+    <div style="margin-bottom: 3rem;">
+      <h3 style="color: #2c3e50; margin-bottom: 1rem; padding-left: 1rem; border-left: 4px solid #e67e22;">📚 Littérature</h3>
+      <div class="ouvrages">
+        <div class="liv">
+          <img src="timalice.jpg" alt="Ti Bouki ak Ti Malis" width="200" height="300">
+          <a href="https://www.haitiinter.com/bouqui-et-malice-deux-grandes-figures-de-la-tradition-orale-haitienne/">Video</a>
+        </div>
+        <div class="liv">
+          <img src="gouverneur.jpg" alt="Gouverneurs de la Rosée" width="200" height="300">
+      <a href="https://www.bing.com/videos/riverview/relatedvideo?&q=liv+Gouverneurs+de+la+Ros%c3%a9e&&mid=2BCF8316688E82542F5B2BCF8316688E82542F5B&&FORM=VRDGAR">video</a>
+        </div>
+        <div class="liv">
+
+          <img src="compere.webp" alt="Compère Gèneral Soleil" width="200" height="300">
+          <a href="https://www.bing.com/videos/riverview/relatedvideo?&q=liv+Comp%c3%a8re+G%c3%a8neral+Soleil&&mid=BA733BE2C3129EC8145CBA733BE2C3129EC8145C&&FORM=VRDGAR">video</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kategori: Istwa -->
+    <div style="margin-bottom: 3rem;">
+      <h3 style="color: #2c3e50; margin-bottom: 1rem; padding-left: 1rem; border-left: 4px solid #e67e22;">📜 Histoire</h3>
+      <div class="ouvrages">
+        <div class="liv">
+          <img src="thomas madiou.webp" alt="Ayiti" width="200" height="300">
+         <a href="https://www.bing.com/videos/riverview/relatedvideo?&q=istwa+ayiti+thomas+madiou&&mid=77C2101DC71B9E572A4277C2101DC71B9E572A42&mmscn=mtsc&aps=0&FORM=VRDGAR">vidéo</a>
+        </div>
+        <div class="liv">
+          <img src="tousant.jpg" alt="Toussaint Louverture" width="200" height="300">
+          <a href="https://www.bing.com/videos/riverview/relatedvideo?&q=istwa+toussaint+louverture&&mid=A88B89FCBDCE317D2B80A88B89FCBDCE317D2B80&&FORM=VRDGAR">vidéo</a>
+        <div class="liv">
+          <h4>Les Jacobins Noirs</h4>
+          <img src="jacotinnoir.jpg" alt="Les Jacobins Noirs" width="200" height="300">
+          <a href="https://www.bing.com/videos/riverview/relatedvideo?q=liv%20Les%20Jacobins%20Noirs&mid=73BD22452D3E48FF403273BD22452D3E48FF4032&ajaxhist=0">vidéo</a>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Kategori: Syans -->
+    <div style="margin-bottom: 3rem;">
+      <h3 style="color: #2c3e50; margin-bottom: 1rem; padding-left: 1rem; border-left: 4px solid #e67e22;">🔬 Sciences</h3>
+      <div class="ouvrages">
+        <div class="liv">
+          <img src="Mathematiques_elementaires.avif" alt="Math" width="200" height="300"></img>
+           <a href="https://www.mathematiqueselementaires.com/" target="_blank">mathematiques elementaires</a>
+          
+        </div>
+        <div class="liv">
+          <h4>Sciences Naturelles</h4>
+          <img src="scesnaturelles.jpg" alt="sciences Naturelles" width="200" height="300">
+          <a href="https://www.abebooks.com/SCIENCES-NATURELLES-BREVET-SUPERIEUR-ANNEE-ANATOMIE/22693640661/bd">sciencs naturelles</a>
+
+        </div>
+        <div class="liv">
+          <img src="physiquetous.webp" alt="physique" width="200" height="300">
+          <a href="100-qcm-corrige-s-125-exercices-corrige-s-pdfdrive-">Physique pour Tous</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kategori: Timoun -->
+    <div style="margin-bottom: 3rem;">
+      <h3 style="color: #2c3e50; margin-bottom: 1rem; padding-left: 1rem; border-left: 4px solid #e67e22;">🎨 Livres pour Enfants</h3>
+      <div class="ouvrages">
+        <div class="liv">
+          <h4>Contes Créoles</h4>
+          <p><strong>Auteur:</strong> Mimi Barthelemy</p>
+          <p><strong>Année:</strong> 2015</p>
+          <p>Histoires pour enfants</p>
+        </div>
+        <div class="liv">
+          <h4>Alphabet Créole</h4>
+          <p><strong>Auteur:</strong> Josette Bruffaerts</p>
+          <p><strong>Année:</strong> 2017</p>
+          <p>Apprendre les lettres</p>
+        </div>
+        <div class="liv">
+          <img src="liv c.webp" alt="liv c" width="200" height="300">
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>📚 Bibliothèque à Domicile</h3>
+        <p>Ressources pour tous âges — Cherchez, lisez et découvrez.</p>
+        <p>📧 Email: bibliotheque@domicile.ht</p>
+        <p>📱 Téléphone: +509 1234-5678</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>🔗 Liens Rapides</h3>
+        <ul>
+          <li><a href="index.html">🏠 Acceuil</a></li>
+          <li><a href="collection.html">📚collection</a></li>
+          <li><a href="#liv">📖 Livres</a></li>
+          <li><a href="membre.html">👥 Devenir Membre</a></li>
+          <li><a href="contact.html">📞 Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>⏰ Heures d'Ouverture</h3>
+        <ul>
+          <li>Lundi - Vendredi: 8h - 18h</li>
+          <li>Samedi: 9h - 15h</li>
+          <li>Dimanche: Fermé</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <p>📍 Adresse:</p>
+          <p>Port-au-Prince, Haïti</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Bibliothèque à Domicile — Tous droits réservés</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+

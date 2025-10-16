@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliothèque à Domicile</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #2c3e50; color: white; }
+    /* Header */
+    header {
+      background: #2c3e50; color: white;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; flex-wrap: wrap;
+    }
+    header .logo { font-weight: bold; font-size: 1.3rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+ .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color:greenyellow;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .checkbox-group {
+            margin-top: 20px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #66ea90 0%, #9fa24b 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+
+  /* Kontak */
+    .kontak { text-align: center; }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .footer-column {
+      padding: 0 15px;
+    }
+    
+    @media (max-width: 768px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+    /* Footer */
+    footer {
+      background: #2c3e50; color: white;
+      padding: 40px 0 20px; margin-top: 40px;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .footer-column h3 {
+      margin-bottom: 15px;
+      color: #ecf0f1;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 0.5rem;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+    .footer-column a {
+      color: #bdc3c7;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-column a:hover {
+      color: #e67e22;
+    }
+    .footer-column p {
+      line-height: 1.6;
+      color: #bdc3c7;
+      margin-bottom: 8px;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #34495e;
+    }
+    .footer-bottom p {
+      color: #95a5a6;
+      margin: 0;
+    }
+
+    /* Responsivite */
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav ul { flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+  
+   <header>
+    <div class="logo"> 
+<img src="logo_haitiprojects.jpeg" alt="logo>" width="50" height="50">Haiti Projects 
+
+    </div>
+     <nav class="menu">
+<ul>
+           <li><a href="index.html">Akèy</a></li>
+  <li><a href="Membres.html">Vin Manm</a></li>
+      <li><a href="collections.html">Koleksyon</a></li>
+      <li><a href="contacts.html">Kontak</a></li>
+      <li><a href="Details.html">Detay</a></li>
+        </ul>
+   </nav>
+  </header>
+</head>
+<body>
+<body> 
+
+  <div class="container">
+    <h1>📞 Contactez-Nous</h1>
+    <p class="subtitle">Remplissez le formulaire et nous vous répondrons rapidement</p>
+    
+    <form action="#" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nom">Nom <span class="required">*</span></label>
+          <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+        </div>
+        
+        <div class="form-group">
+          <label for="prenom">Prénom <span class="required">*</span></label>
+          <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="email@exemple.fr">
+      </div>
+      
+      <div class="form-group">
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="+509 1234-5678">
+      </div>
+      
+      <div class="form-group">
+        <label for="sujet">Sujet <span class="required">*</span></label>
+        <select id="sujet" name="sujet" required>
+          <option value="">Choisissez un sujet</option>
+          <option value="question">Question Générale</option>
+          <option value="suggestion">Suggestion</option>
+          <option value="reservation">Réservation de Livre</option>
+          <option value="membership">Informations sur l'Adhésion</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Votre Message <span class="required">*</span></label>
+        <textarea id="message" name="message" required placeholder="Écrivez votre message ici..."></textarea>
+      </div>
+      
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" name="newsletter" value="1">
+          <span>Je souhaite recevoir la newsletter de la bibliothèque</span>
+        </label>
+      </div>
+      
+      <button type="submit" class="submit-btn">📤 Envoyer le Message</button>
+    </form>
+  </div>
+
+  <section style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+    <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px; font-size: 2rem;">📋 Règlement de la Bibliothèque</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+      <div style="background: #ecf0f1; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h3 style="color: #2c3e50; margin-bottom: 15px;">📖 Prêt de Livres</h3>
+        <ul style="list-style-position: inside; color: #34495e; line-height: 1.8;">
+          <li>Maximum 3 livres pour 2 semaines</li>
+          <li>Possibilité de renouveler 1 fois</li>
+          <li>Retour en retard: 10 gourdes par jour</li>
+          <li>Carte de membre obligatoire</li>
+        </ul>
+      </div>
+      
+      <div style="background: #ecf0f1; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h3 style="color: #2c3e50; margin-bottom: 15px;">🤫 Comportement</h3>
+        <ul style="list-style-position: inside; color: #34495e; line-height: 1.8;">
+          <li>Maintenir le calme dans la bibliothèque</li>
+          <li>Téléphone en mode silencieux</li>
+          <li>Ne pas manger ou boire</li>
+          <li>Respecter les autres membres</li>
+        </ul>
+      </div>
+      
+      <div style="background: #ecf0f1; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h3 style="color: #2c3e50; margin-bottom: 15px;">💳 Adhésion</h3>
+        <ul style="list-style-position: inside; color: #34495e; line-height: 1.8;">
+          <li>Adulte: 500 gourdes/an</li>
+          <li>Enfant (5-17): 200 gourdes/an</li>
+          <li>Étudiant: 300 gourdes/an</li>
+          <li>Première carte gratuite</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+      <h3 style="color: #2c3e50; margin-bottom: 20px;">📍 Où Nous Trouver</h3>
+      <img src="https://via.placeholder.com/800x400/2c3e50/ffffff?text=Carte+Localisation+Bibliotheque" 
+           alt="Carte de localisation de la bibliothèque" 
+           style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+      <p style="margin-top: 15px; color: #34495e; font-size: 1.1rem;">
+    
+      </p>
+    </div>
+  </section>
+
+
+
+
+  </body>
+
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>📚 Bibliothèque à Domicile</h3>
+        <p>Ressources pour tous âges — Cherchez, lisez et découvrez.</p>
+        <p>📧 Email: bibliotheque@domicile.ht</p>
+        <p>📱 Téléphone: +509 1234-5678</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>🔗 Liens Rapides</h3>
+        <ul>
+          <li><a href="index.html">🏠 Accueil</a></li>
+          <li><a href="collection.html">📚 Collection</a></li>
+          <li><a href="#liv">📖 Livres</a></li>
+          <li><a href="membre.html">👥 Devenir Membre</a></li>
+          <li><a href="contact.html">📞 Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>⏰ Heures d'Ouverture</h3>
+        <ul>
+          <li>Lundi - Vendredi: 8h - 18h</li>
+          <li>Samedi: 9h - 15h</li>
+          <li>Dimanche: Fermé</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <p>📍 Adresse:</p>
+          <p>Port-au-Prince, Haïti</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Bibliothèque à Domicile — Tous droits réservés</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
